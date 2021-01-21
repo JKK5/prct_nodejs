@@ -14,12 +14,7 @@ const app = http.createServer(function (request, response) {
         const title = "Welcome";
         const desc = "Hello, Node.js";
         const list = template.list(filelist);
-        const html = template.html(
-          title,
-          list,
-          `<a href="/create">create</a>`,
-          `<h2>${title}</h2>${desc}`
-        );
+        const html = template.html(title, list, `<a href="/create">create</a>`, `<h2>${title}</h2>${desc}`);
         response.writeHead(200);
         response.end(html);
       });
